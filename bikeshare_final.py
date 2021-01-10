@@ -135,8 +135,8 @@ def time_stats(df):
     common_hour = str(df['hour'].mode()[0])
     print('Most Frequent Start Hour: {}:00'.format(common_hour))
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip.
@@ -163,8 +163,8 @@ def station_stats(df):
     print('The most common combination of Start and End Stations and number of trips:\n\n',
     df.groupby(['Start Station', 'End Station']).size().sort_values(ascending=False).nlargest(n=1))
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 
 def trip_duration_stats(df):
@@ -189,8 +189,8 @@ def trip_duration_stats(df):
     mean_trvl_time = df['Trip Duration'].mean()
     print('The average travel time was: ', mean_trvl_time/60, 'minutes')
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 
 def user_stats(df):
@@ -228,8 +228,8 @@ def user_stats(df):
     except:
         print('\nSorry, there is no birth year data available for this query.')
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 def raw_data(df):
     """ The raw_data function asks users if they would like to see raw data from
@@ -255,15 +255,15 @@ def raw_data(df):
                 print("Sorry, that's not a valid option. Please enter either yes or no.")
         except Exception as e:
             print(e)
-    # display raw data five rows at a time
-    while raw_data_pref in ('Yes', 'yes', 'Y', 'y') and start_row + 5 < len(df):
-        print('\n Displaying rows {} to {}:'.format(start_row + 1, start_row + 5))
-        print('\n', df.iloc[start_row:start_row + 5, 1:9])
-        start_row += 5
+    # display raw data ten rows at a time
+    while raw_data_pref in ('Yes', 'yes', 'Y', 'y') and start_row + 10 < len(df):
+        print('\n Displaying rows {} to {}:'.format(start_row + 1, start_row + 10))
+        print('\n', df.iloc[start_row:start_row + 10, 1:9])
+        start_row += 10
         print('-'*50)
-        raw_data_pref = input("\nWould you like to see the next five rows of raw_data?\n\t"
+        raw_data_pref = input("\nWould you like to see the next 10 rows of raw_data?\n\t"
         "Y = Yes\n\tN = No\n>>  ")
-    if start_row + 5 >= len(df):
+    if start_row + 10 >= len(df):
         print('\nYou have reached the end of the raw data set.')
 
 def main():
