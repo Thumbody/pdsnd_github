@@ -9,7 +9,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 print('-'*50)
-print('\nHello fellow bikeshare data nerd! Let\'s explore some US bikeshare data.')
+print('\nWelcome to this bikeshare data application! \nIf you are looking to explore some US bikeshare data you\'ve come to the right place.')
 print('This application has data for Chicago, New York City and Washington.\n')
 
 def get_filters():
