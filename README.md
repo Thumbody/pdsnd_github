@@ -5,7 +5,8 @@ Project and README file created on Saturday, 9 January 2021.
 Udacity Bikeshare Project
 
 ### Description
-The project uses python3 to create a console interface for examining bikeshare data.
+The project uses Python3 to create a console interface for examining bikeshare data.
+The project was part of Udacity's Data Science Nanodegree program.
 
 ### Files used
 bikshare_final.py
