@@ -135,8 +135,8 @@ def time_stats(df):
     common_hour = str(df['hour'].mode()[0])
     print('Most Frequent Start Hour: {}:00'.format(common_hour))
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip.
@@ -163,8 +163,8 @@ def station_stats(df):
     print('The most common combination of Start and End Stations and number of trips:\n\n',
     df.groupby(['Start Station', 'End Station']).size().sort_values(ascending=False).nlargest(n=1))
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 
 def trip_duration_stats(df):
@@ -189,8 +189,8 @@ def trip_duration_stats(df):
     mean_trvl_time = df['Trip Duration'].mean()
     print('The average travel time was: ', mean_trvl_time/60, 'minutes')
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 
 def user_stats(df):
@@ -228,8 +228,8 @@ def user_stats(df):
     except:
         print('\nSorry, there is no birth year data available for this query.')
 
-    print("\nThis took %s seconds to compute." % (time.time() - start_time))
-    print('-'*50)
+    # print("\nThis took %s seconds to compute." % (time.time() - start_time))
+    # print('-'*50)
 
 def raw_data(df):
     """ The raw_data function asks users if they would like to see raw data from
