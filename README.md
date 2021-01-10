@@ -1,5 +1,5 @@
 ### Date created
-Project and README file created on 9 January 2021.
+Project and README file created on Saturday, 9 January 2021.
 
 ### Project Title
 Udacity Bikeshare Project
