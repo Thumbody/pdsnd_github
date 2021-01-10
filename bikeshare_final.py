@@ -255,15 +255,15 @@ def raw_data(df):
                 print("Sorry, that's not a valid option. Please enter either yes or no.")
         except Exception as e:
             print(e)
-    # display raw data five rows at a time
-    while raw_data_pref in ('Yes', 'yes', 'Y', 'y') and start_row + 5 < len(df):
-        print('\n Displaying rows {} to {}:'.format(start_row + 1, start_row + 5))
-        print('\n', df.iloc[start_row:start_row + 5, 1:9])
-        start_row += 5
+    # display raw data ten rows at a time
+    while raw_data_pref in ('Yes', 'yes', 'Y', 'y') and start_row + 10 < len(df):
+        print('\n Displaying rows {} to {}:'.format(start_row + 1, start_row + 10))
+        print('\n', df.iloc[start_row:start_row + 10, 1:9])
+        start_row += 10
         print('-'*50)
-        raw_data_pref = input("\nWould you like to see the next five rows of raw_data?\n\t"
+        raw_data_pref = input("\nWould you like to see the next 10 rows of raw_data?\n\t"
         "Y = Yes\n\tN = No\n>>  ")
-    if start_row + 5 >= len(df):
+    if start_row + 10 >= len(df):
         print('\nYou have reached the end of the raw data set.')
 
 def main():
