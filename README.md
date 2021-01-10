@@ -14,4 +14,4 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+It's important to give proper credit.  Add links to any repo that inspired you or blogposts you consulted.  Great idea, but I don't have any links to include at this time.
